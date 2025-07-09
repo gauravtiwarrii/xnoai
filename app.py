@@ -16,5 +16,8 @@ def ai_move():
     winner = check_winner(board, "O")
     return jsonify({"board": board, "move": move, "winner": winner})
 
+import os
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=False, host="0.0.0.0", port=port)

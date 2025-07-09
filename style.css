@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #0b0f1a;
+  color: #80ff80;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.card {
+  background: #0e1425;
+  border: 1px solid #2e2e2e;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+  width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #80ff80;
+}
+
+.status {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.cell {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #131b2b;
+  border: 1px solid #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  color: #80ff80;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.cell:hover {
+  background: #1a2b1a;
+}
+
+.reset-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #283d26;
+  color: #80ff80;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #c8c8c8;
+  text-align: center;
+}
+
+.about {
+  margin-top: 10px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(12, 12, 12, 0.8);
+}
+
+.modal-content {
+  background-color: #121c2d;
+  color: #80ff80;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #2e2e2e;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: left;
+  font-family: 'Courier New', monospace;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
+
+.close-btn {
+  color: #80ff80;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+.modal-img {
+  width: 100%;
+  margin: 15px 0;
+  border-radius: 8px;
+  border: 1px solid #444;
+}
+
+.ai-link {
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #a8f0a8;
+}
